@@ -1,13 +1,22 @@
-[gd_scene load_steps=23 format=3 uid="uid://dlmfp2l58fl7r"]
+[gd_scene load_steps=27 format=3 uid="uid://dlmfp2l58fl7r"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_gakxv"]
 [ext_resource type="PackedScene" uid="uid://ctwfhsr53boeg" path="res://movement_hand_walk.tscn" id="2_5dofw"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="2_wss5p"]
 [ext_resource type="PackedScene" uid="uid://dgncgj4b56r52" path="res://xr_tools_hand_pusher.tscn" id="3_bu4bl"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="3_nu1c5"]
+[ext_resource type="Texture2D" uid="uid://cvtilod5lfh3t" path="res://prototype/PNG/Green/texture_08.png" id="6_4rswy"]
+[ext_resource type="Texture2D" uid="uid://bjx7qtsq5g476" path="res://prototype/PNG/Orange/texture_01.png" id="7_y5jtp"]
+[ext_resource type="Texture2D" uid="uid://dkbuh5jr2qdux" path="res://addons/AllSkyFree/Skyboxes/AllSkyFree_Sky_ClearBlueSky_Equirect.png" id="8_sw8bs"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qu5kw"]
 size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26cvi"]
+albedo_color = Color(0, 0.733333, 0.623529, 1)
+albedo_texture = ExtResource("6_4rswy")
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_w3gnw"]
 
@@ -15,19 +24,19 @@ size = Vector3(0.1, 0.1, 0.1)
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0x476"]
-albedo_color = Color(0.470588, 0.470588, 0.470588, 1)
+albedo_texture = ExtResource("7_y5jtp")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_upm0w"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3he1b"]
-albedo_color = Color(0.470588, 0.470588, 0.470588, 1)
+albedo_texture = ExtResource("7_y5jtp")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xqpg3"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ji0wy"]
-albedo_color = Color(0.470588, 0.470588, 0.470588, 1)
+albedo_texture = ExtResource("7_y5jtp")
 
 [sub_resource type="BoxMesh" id="BoxMesh_vrlun"]
 
@@ -35,21 +44,22 @@ albedo_color = Color(0.470588, 0.470588, 0.470588, 1)
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkuru"]
-albedo_color = Color(0.470588, 0.470588, 0.470588, 1)
+albedo_texture = ExtResource("7_y5jtp")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_htaqa"]
-albedo_color = Color(0.470588, 0.470588, 0.470588, 1)
+albedo_texture = ExtResource("7_y5jtp")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igg63"]
-albedo_color = Color(0.470588, 0.470588, 0.470588, 1)
+albedo_texture = ExtResource("7_y5jtp")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gnw6w"]
-albedo_color = Color(0.470588, 0.470588, 0.470588, 1)
+albedo_texture = ExtResource("7_y5jtp")
 
-[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_3av0q"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_a3yh6"]
+panorama = ExtResource("8_sw8bs")
 
 [sub_resource type="Sky" id="Sky_01wgo"]
-sky_material = SubResource("PhysicalSkyMaterial_3av0q")
+sky_material = SubResource("PanoramaSkyMaterial_a3yh6")
 
 [sub_resource type="Environment" id="Environment_67l88"]
 background_mode = 2
@@ -94,6 +104,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15813, 0, -1.32179)
 
 [node name="XRToolsMovementHandWalk" parent="XROrigin3D" instance=ExtResource("2_5dofw")]
 fling_multiplier = 0.5
+max_velocity = 10.0
 grav = 5.0
 velocity_averages = 8
 
@@ -101,6 +112,7 @@ velocity_averages = 8
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Env"]
 transform = Transform3D(18.3107, 0, 0, 0, 0.556596, 0, 0, 0, 20.9464, 0, -0.245449, 0)
+material_override = SubResource("StandardMaterial3D_26cvi")
 mesh = SubResource("BoxMesh_w3gnw")
 skeleton = NodePath("../..")
 
@@ -245,5 +257,5 @@ shape = SubResource("ConcavePolygonShape3D_fo386")
 environment = SubResource("Environment_67l88")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.930577, 0.291382, 0.221636, 0, -0.605405, 0.795918, 0.366095, -0.740663, -0.563376, 0, 2.90989, 0)
+transform = Transform3D(-0.993621, -0.0897553, -0.0682712, -1.09105e-08, -0.605405, 0.795918, -0.11277, 0.790841, 0.601543, 0, 2.90989, 0)
 shadow_enabled = true

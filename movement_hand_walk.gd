@@ -7,8 +7,8 @@ extends XRToolsMovementProvider
 @export var order : int = 15
 
 ## Velocity multiplier when flinging up walls
-@export var fling_multiplier : float = 0.5
-@export var max_velocity : float = 10.0
+@export var fling_multiplier : float = 0.95
+@export var max_velocity : float = 20.0
 
 @export var grav : float = 9.8
 var cur_grav_force : float = 0.0
